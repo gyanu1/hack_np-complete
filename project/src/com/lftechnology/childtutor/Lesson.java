@@ -1,5 +1,6 @@
 package com.lftechnology.childtutor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Lesson {
@@ -11,7 +12,7 @@ public class Lesson {
         String sound;
     }
 
-    private List<Page> pages;
+    protected List<Page> pages;
 
     public Page getNextPage() {
         if (isLastPage())
@@ -31,5 +32,10 @@ public class Lesson {
 
     public boolean isFirstPage() {
         return currentPage == 0;
+    }
+
+    public Lesson() {
+        currentPage = 0;
+        pages = new ArrayList<Page>();
     }
 }
