@@ -7,6 +7,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.widget.TextView;
 
 import com.lftechnology.childtutor.utils.AndroidUtility;
 
@@ -18,7 +21,13 @@ public class Home extends Activity implements OnClickListener {
 		Log.d(TAG, "Loading Child Tutor..");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
-
+		TextView myText = (TextView) findViewById(R.id.checkedTextView1);
+		Animation anim = new AlphaAnimation(0.0f, 1.0f);
+		anim.setDuration(100); //You can manage the time of the blink with this parameter
+		anim.setStartOffset(20);
+		anim.setRepeatMode(Animation.REVERSE);
+		anim.setRepeatCount(Animation.INFINITE);
+		myText.startAnimation(anim);
 		// Add event handlers for buttons
 		View lesson1Button = findViewById(R.id.home);
 		lesson1Button.setOnClickListener(this);
