@@ -33,8 +33,16 @@ public class Home extends Activity implements OnClickListener {
             // call lessen1
             break;
 
+        case R.id.lesson1:
+            // call lessen1
+            break;
+
+        case R.id.lesson2:
+            // call lesson2
+            break;
 
         }
     }
 
 }
+
