@@ -14,37 +14,37 @@ import com.lftechnology.childtutor.model.LessonParser;
 
 public class LessonPlay extends Activity {
 
-    private Lesson lesson;
+	private Lesson lesson;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.lesson_play);
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.lesson_play);
 
-        // Create and set adapter
-        LessonPlayAdapter adapter = new LessonPlayAdapter(this);
-        ViewPager myPager = (ViewPager) findViewById(R.id.customviewpager);
-        myPager.setAdapter(adapter);
-        myPager.setCurrentItem(0);
+		// Create and set adapter
+		LessonPlayAdapter adapter = new LessonPlayAdapter(this);
+		ViewPager myPager = (ViewPager) findViewById(R.id.customviewpager);
+		myPager.setAdapter(adapter);
+		myPager.setCurrentItem(0);
 
-        loadLesson();
+		loadLesson();
 
-    }
+	}
 
-    private void loadLesson() {
-        try {
-            Bundle bundle = getIntent().getExtras();
-            int lessonId = bundle.getInt("lesson");
+	private void loadLesson() {
+		try {
+			Bundle bundle = getIntent().getExtras();
+			String lessonName = bundle.getString("lesson");
 
-            InputStream is = this.getResources().openRawResource(lessonId);
-            lesson = LessonParser.parse(is);
-        } catch (XmlPullParserException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
+			InputStream is = this.getAssets().open(lessonName + "/lesson.xml");
+			lesson = LessonParser.parse(is);
+		} catch (XmlPullParserException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 }

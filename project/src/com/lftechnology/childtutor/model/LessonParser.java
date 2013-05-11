@@ -33,10 +33,14 @@ public class LessonParser {
 					page = new Lesson.Page();
 					lesson.pages.add(page);
 				} else if (tag.equals("image")) {
-					Log.d("Parser", "This is path: " + xpp.getAttributeValue(null, "path"));
+					Log.d("Parser", "This is image path: " + xpp.getAttributeValue(null, "path"));
 					page.image = xpp.getAttributeValue(null, "path");
 				} else if (tag.equals("sound")) {
+					Log.d("Parser", "This is sound path: " + xpp.getAttributeValue(null, "path"));
 					page.image = xpp.getAttributeValue(null, "path");
+				} else if (tag.equals("lesson")) {
+					Log.d("Parser", "This is lesson name: " + xpp.getAttributeValue(null, "name"));
+					lesson.name = xpp.getAttributeValue(null, "name");
 				}
 
 			}

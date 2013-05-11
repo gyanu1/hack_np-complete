@@ -1,10 +1,10 @@
 <lesson><pages><page>
-            <sound path="ka.avi" />
+            <sound path="beep9.mp3" />
 
             <image path="ka.png" />
         </page>
         <page>
-            <sound path="kha.avi" />
+            <sound path="beep9.mp3" />
 
             <image path="kha.png" />
         </page>

@@ -50,10 +50,10 @@ public class LessonMenu extends Activity implements OnClickListener {
 		switch (v.getId()) {
 
 		case R.id.lesson1:
-			bundle.putInt("lesson", R.raw.kakhaga);
+			bundle.putString("lesson", "kakhaga");
 			break;
 		case R.id.lesson2:
-			bundle.putInt("lesson", R.raw.kakhaga);
+			bundle.putString("lesson", "kakhaga");
 			break;
 
 		}

@@ -5,6 +5,8 @@ import java.util.List;
 
 public class Lesson {
 
+	public String name;
+
 	private int currentPage;
 
 	public static class Page {
