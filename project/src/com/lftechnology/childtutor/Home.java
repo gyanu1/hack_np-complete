@@ -1,7 +1,5 @@
 package com.lftechnology.childtutor;
 
-import com.lftechnology.childtutor.utils.SoundEffects;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,14 +8,15 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import com.lftechnology.childtutor.utils.AndroidUtility;
 
 public class Home extends Activity implements OnClickListener {
-private static final String TAG="Home";
+    private static final String TAG = "Home";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-    	Log.d(TAG, "Loading Child Tutor..");
-    	super.onCreate(savedInstanceState);
+        Log.d(TAG, "Loading Child Tutor..");
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
         // Add event handlers for buttons
@@ -34,16 +33,16 @@ private static final String TAG="Home";
 
     @Override
     public void onClick(View v) {
-    	SoundEffects.buttonClickSound(this);//To generate sound while clicking button
+        AndroidUtility.play(this, R.raw.beep9);// To generate sound
+                                                           // while clicking
+                                                           // button
         switch (v.getId()) {
 
         case R.id.childTutorLogo:
             // call lessen1
-        	Intent j = new Intent(getApplicationContext(),
-					LessonMenu.class);
-			startActivity(j);
+            Intent j = new Intent(getApplicationContext(), LessonMenu.class);
+            startActivity(j);
             break;
         }
     }
 }
-

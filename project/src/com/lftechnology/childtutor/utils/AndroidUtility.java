@@ -12,7 +12,7 @@ import android.media.MediaPlayer;
  * 
  */
 public class AndroidUtility {
-    public static void buttonClickSound(Context context, int id) {
+    public static void play(Context context, int id) {
         MediaPlayer mMediaPlayer = new MediaPlayer();
         mMediaPlayer = MediaPlayer.create(context, id);
         mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
