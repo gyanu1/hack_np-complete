@@ -11,7 +11,7 @@ import android.view.View.OnClickListener;
 import com.lftechnology.childtutor.utils.AndroidUtility;
 
 public class Home extends Activity implements OnClickListener {
-    private static final String TAG = "Home";
+    public static final String TAG = "Home";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
