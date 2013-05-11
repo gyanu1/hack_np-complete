@@ -1,5 +1,7 @@
 package com.lftechnology.childtutor;
 
+import com.lftechnology.childtutor.utils.SoundEffects;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

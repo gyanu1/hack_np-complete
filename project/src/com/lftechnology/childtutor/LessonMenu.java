@@ -3,6 +3,8 @@
  */
 package com.lftechnology.childtutor;
 
+import com.lftechnology.childtutor.utils.SoundEffects;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
