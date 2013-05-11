@@ -7,35 +7,41 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
+import android.util.Log;
+
+import com.lftechnology.childtutor.model.Lesson.Page;
+
 public class LessonParser {
 
-    public static Lesson parse(InputStream is) throws XmlPullParserException, IOException {
-        Lesson lesson = null;
-        int current = -1;
-        XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
-        factory.setNamespaceAware(false);
-        XmlPullParser xpp = factory.newPullParser();
+	public static Lesson parse(InputStream is) throws XmlPullParserException, IOException {
+		Lesson lesson = null;
+		Page page = null;
+		XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+		factory.setNamespaceAware(false);
+		XmlPullParser xpp = factory.newPullParser();
 
-        xpp.setInput(is, null);
+		xpp.setInput(is, null);
 
-        int eventType = xpp.getEventType();
-        while (eventType != XmlPullParser.END_DOCUMENT) {
-            if (eventType == XmlPullParser.START_DOCUMENT) {
-                lesson = new Lesson();
-            } else if (eventType == XmlPullParser.START_TAG) {
+		int eventType = xpp.getEventType();
+		while (eventType != XmlPullParser.END_DOCUMENT) {
+			if (eventType == XmlPullParser.START_DOCUMENT) {
+				lesson = new Lesson();
+			} else if (eventType == XmlPullParser.START_TAG) {
 
-                String tag = xpp.getName();
-                if (tag.equals("page")) {
-                    lesson.pages.add(++current, new Lesson.Page());
-                } else if (tag.equals("image")) {
-                    lesson.pages.get(current).image = xpp.getAttributeValue(null, "path");
-                } else if (tag.equals("sound")) {
-                    lesson.pages.get(current).image = xpp.getAttributeValue(null, "path");
-                }
+				String tag = xpp.getName();
+				if (tag.equals("page")) {
+					page = new Lesson.Page();
+					lesson.pages.add(page);
+				} else if (tag.equals("image")) {
+					Log.d("Parser", "This is path: " + xpp.getAttributeValue(null, "path"));
+					page.image = xpp.getAttributeValue(null, "path");
+				} else if (tag.equals("sound")) {
+					page.image = xpp.getAttributeValue(null, "path");
+				}
 
-            }
-            eventType = xpp.next();
-        }
-        return lesson;
-    }
+			}
+			eventType = xpp.next();
+		}
+		return lesson;
+	}
 }
