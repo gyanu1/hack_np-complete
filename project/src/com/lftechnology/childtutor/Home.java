@@ -14,9 +14,9 @@ public class Home extends Activity implements OnClickListener {
         setContentView(R.layout.activity_home);
 
         // Add event handlers for buttons
-        View lesson1Button = findViewById(R.id.lesson1);
+        View lesson1Button = findViewById(R.id.button1);
         lesson1Button.setOnClickListener(this);
-        View lesson2Button = findViewById(R.id.lesson2);
+        View lesson2Button = findViewById(R.id.button2);
         lesson2Button.setOnClickListener(this);
     }
 
