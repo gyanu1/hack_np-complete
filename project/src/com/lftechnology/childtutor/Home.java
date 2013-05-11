@@ -6,37 +6,35 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-public class Home extends Activity {
+public class Home extends Activity implements OnClickListener {
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_home);
-		View lesson1Button = findViewById(R.id.lesson1);
-		lesson1Button.setOnClickListener((OnClickListener) Home.this);
-		View lesson2Button = findViewById(R.id.lesson2);
-		lesson2Button.setOnClickListener((OnClickListener) Home.this);
-	}
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.home, menu);
-		return true;
-	}
+        // Add event handlers for buttons
+        View lesson1Button = findViewById(R.id.childTutorLogo);
+        lesson1Button.setOnClickListener(this);
+    }
 
-	public void onClick(View v) {
-		switch (v.getId()) {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.home, menu);
+        return true;
+    }
 
-		case R.id.lesson1:
-			//call lessen1
-			break;
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
 
-		case R.id.lesson2:
-			//call lesson2
-			break;
+        case R.id.childTutorLogo:
+            // call lessen1
+            break;
 
-		}
-	}
+
+        }
+    }
 
 }

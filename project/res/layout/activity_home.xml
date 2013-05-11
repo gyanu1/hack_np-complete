@@ -8,6 +8,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Home" >
 
+<<<<<<< Updated upstream
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
@@ -30,5 +31,22 @@
         android:layout_below="@+id/lesson2"
         android:layout_marginTop="73dp"
         android:text="Lesson 2" />
+=======
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher" />
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginRight="23dp"
+        android:layout_marginTop="68dp"
+        android:src="@android:drawable/btn_default_small" />
+>>>>>>> Stashed changes
 
 </RelativeLayout>
