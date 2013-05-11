@@ -50,17 +50,4 @@ public class LessonParser {
         return null;
 
     }
-
-    private static int handleTag(Lesson lesson, int current, String tag, String path) {
-
-        if (tag.equals("page")) {
-            lesson.pages.add(++current, new Lesson.Page());
-        } else if (tag.equals("image")) {
-            lesson.pages.get(current).image = path;
-        } else if (tag.equals("sound")) {
-            lesson.pages.get(current).image = path;
-        }
-
-        return current;
-    }
 }
