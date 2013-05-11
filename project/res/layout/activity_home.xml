@@ -9,8 +9,26 @@
     tools:context=".Home" >
 
     <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text=" " />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lesson1"
+        android:layout_toRightOf="@+id/lesson1"
+        android:text="Lesson 1" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lesson2"
+        android:layout_below="@+id/lesson2"
+        android:layout_marginTop="73dp"
+        android:text="Lesson 2" />
 
 </RelativeLayout>
