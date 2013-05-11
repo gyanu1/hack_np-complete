@@ -27,8 +27,7 @@ public class LessonMenu extends Activity implements OnClickListener {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.lesson_activity);
-		View lesson1Button = findViewById(R.id.lesson1);
-		lesson1Button.setOnClickListener(LessonMenu.this);
+		
 		View lesson2Button = findViewById(R.id.lesson2);
 		lesson2Button.setOnClickListener(LessonMenu.this);
 	}
@@ -50,7 +49,7 @@ public class LessonMenu extends Activity implements OnClickListener {
 
 		switch (v.getId()) {
 
-		case R.id.lesson1:
+		case R.id.abc:
 			bundle.putString("lesson", "kakhaga");
 			break;
 		case R.id.lesson2:

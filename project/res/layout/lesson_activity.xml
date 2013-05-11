@@ -3,30 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/black"
+    android:paddingTop="10dp"
     android:orientation="vertical" >
 
-    <ImageButton
-        android:id="@+id/lesson2"
-        style="@style/AppTheme"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:fitsSystemWindows="false"
-        android:longClickable="false"
-        android:scaleType="centerInside"
-        android:src="@drawable/kakhaga" />
+	 <Button
+	     android:id="@+id/lesson2"
+	     android:layout_width="match_parent"
+	     android:layout_height="117dp"
+	     android:paddingBottom="50dp"
+	     android:background="@drawable/kakhaga" />
 
-    <ImageButton
-        android:id="@+id/lesson1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@android:drawable/btn_default" />
+	 <ImageView
+	     android:id="@+id/imageView1"
+	     android:layout_width="match_parent"
+	     android:layout_height="10dp"
+	     android:src="@drawable/black" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/kakhaga"
-        android:text="Button" />
+	 <Button
+	     android:id="@+id/abc"
+	     android:layout_width="match_parent"
+	     android:layout_height="117dp"
+	     android:paddingTop="20dp"
+	     android:background="@drawable/abc" />
 
 </LinearLayout>
