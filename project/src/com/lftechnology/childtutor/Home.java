@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+
 public class Home extends Activity implements OnClickListener {
 private static final String TAG="Home";
 
@@ -42,6 +43,5 @@ private static final String TAG="Home";
             break;
         }
     }
-
 }
 
