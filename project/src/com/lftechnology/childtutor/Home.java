@@ -11,38 +11,34 @@ import android.view.View.OnClickListener;
 import com.lftechnology.childtutor.utils.AndroidUtility;
 
 public class Home extends Activity implements OnClickListener {
-    private static final String TAG = "Home";
+	private static final String TAG = "Home";
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        Log.d(TAG, "Loading Child Tutor..");
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		Log.d(TAG, "Loading Child Tutor..");
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_home);
 
-        // Add event handlers for buttons
-        View lesson1Button = findViewById(R.id.childTutorLogo);
-        lesson1Button.setOnClickListener(this);
-    }
+		// Add event handlers for buttons
+		View lesson1Button = findViewById(R.id.home);
+		lesson1Button.setOnClickListener(this);
+	}
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home, menu);
-        return true;
-    }
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.home, menu);
+		return true;
+	}
 
-    @Override
-    public void onClick(View v) {
-        AndroidUtility.play(this, R.raw.beep9);// To generate sound
-                                                           // while clicking
-                                                           // button
-        switch (v.getId()) {
+	@Override
+	public void onClick(View v) {
+		AndroidUtility.play(this, R.raw.beep9);// To generate sound
+												// while clicking
+												// button
 
-        case R.id.childTutorLogo:
-            // call lessen1
-            Intent j = new Intent(getApplicationContext(), LessonMenu.class);
-            startActivity(j);
-            break;
-        }
-    }
+		Intent j = new Intent(getApplicationContext(), LessonMenu.class);
+		startActivity(j);
+
+	}
 }
