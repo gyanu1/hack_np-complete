@@ -1,4 +1,4 @@
-package com.lftechnology.childtutor;
+package com.lftechnology.childtutor.model;
 
 import java.io.IOException;
 import java.io.InputStream;
