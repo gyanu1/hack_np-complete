@@ -1,35 +1,35 @@
 <lesson><pages><page>
-            <sound path="beep9.mp3" />
+            <sound path="ka.mp3" />
 
             <image path="ka.png" />
         </page>
         <page>
-            <sound path="beep9.mp3" />
+            <sound path="kha.mp3" />
 
             <image path="kha.png" />
         </page>
         <page>
-            <sound path="ga.avi" />
+            <sound path="ga.mp3" />
 
             <image path="ga.png" />
         </page>
         <page>
-            <sound path="gha.avi" />
+            <sound path="gha.mp3" />
 
             <image path="gha.png" />
         </page>
         <page>
-            <sound path="nga.avi" />
+            <sound path="nga.mp3" />
 
             <image path="nga.png" />
         </page>
         <page>
-            <sound path="cha.avi" />
+            <sound path="cha.mp3" />
 
             <image path="cha.png" />
         </page>
         <page>
-            <sound path="chha.avi" />
+            <sound path="chha.mp3" />
 
             <image path="chha.png" />
         </page>
