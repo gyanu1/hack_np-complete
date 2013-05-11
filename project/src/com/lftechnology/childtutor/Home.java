@@ -1,16 +1,20 @@
 package com.lftechnology.childtutor;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 
 public class Home extends Activity implements OnClickListener {
+private static final String TAG="Home";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    	Log.d(TAG, "Loading Child Tutor..");
+    	super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
         // Add event handlers for buttons
@@ -31,16 +35,10 @@ public class Home extends Activity implements OnClickListener {
 
         case R.id.childTutorLogo:
             // call lessen1
+        	Intent j = new Intent(getApplicationContext(),
+					LessonMenu.class);
+			startActivity(j);
             break;
-
-        case R.id.lesson1:
-            // call lessen1
-            break;
-
-        case R.id.lesson2:
-            // call lesson2
-            break;
-
         }
     }
 
