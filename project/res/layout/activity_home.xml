@@ -8,27 +8,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Home" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+    <ImageButton
+        android:id="@+id/childTutorLogo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=" " />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lesson1"
-        android:layout_toRightOf="@+id/lesson1"
-        android:text="Lesson 1" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/lesson2"
-        android:layout_below="@+id/lesson2"
-        android:layout_marginTop="73dp"
-        android:text="Lesson 2" />
+        android:layout_marginTop="68dp"
+        android:src="@android:drawable/btn_default_small" />
 
 </RelativeLayout>
