@@ -1,4 +1,4 @@
-package com.lftechnology.childtutor;
+package com.lftechnology.childtutor.model;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -49,18 +49,5 @@ public class LessonParser {
         // XmlPullParser
         return null;
 
-    }
-
-    private static int handleTag(Lesson lesson, int current, String tag, String path) {
-
-        if (tag.equals("page")) {
-            lesson.pages.add(++current, new Lesson.Page());
-        } else if (tag.equals("image")) {
-            lesson.pages.get(current).image = path;
-        } else if (tag.equals("sound")) {
-            lesson.pages.get(current).image = path;
-        }
-
-        return current;
     }
 }

@@ -1,4 +1,4 @@
-package com.lftechnology.childtutor;
+package com.lftechnology.childtutor.model;
 
 import java.util.ArrayList;
 import java.util.List;
