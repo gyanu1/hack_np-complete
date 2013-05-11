@@ -3,6 +3,9 @@
  */
 package com.lftechnology.childtutor;
 
+
+import com.lftechnology.childtutor.utils.AndroidUtility;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,8 +29,7 @@ public class LessonMenu extends Activity implements OnClickListener {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.lesson_activity);
-		View lesson1Button = findViewById(R.id.lesson1);
-		lesson1Button.setOnClickListener(LessonMenu.this);
+		
 		View lesson2Button = findViewById(R.id.lesson2);
 		lesson2Button.setOnClickListener(LessonMenu.this);
 	}
@@ -41,6 +43,7 @@ public class LessonMenu extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
+		AndroidUtility.play(this, R.raw.buttonclick);
 		Intent intent;
 		Bundle bundle;
 
@@ -49,7 +52,7 @@ public class LessonMenu extends Activity implements OnClickListener {
 
 		switch (v.getId()) {
 
-		case R.id.lesson1:
+		case R.id.abc:
 			bundle.putString("lesson", "kakhaga");
 			break;
 		case R.id.lesson2:

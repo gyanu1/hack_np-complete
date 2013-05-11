@@ -3,7 +3,10 @@
  */
 package com.lftechnology.childtutor.utils;
 
+import java.io.IOException;
+
 import android.content.Context;
+import android.content.res.AssetFileDescriptor;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 
@@ -18,7 +21,27 @@ public class AndroidUtility {
         mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
         mMediaPlayer.setLooping(false);
         mMediaPlayer.start();
-
     }
-
+    
+    public static void playKaKhaGa(Context context, String file) {
+    	try {    		
+    		MediaPlayer mMediaPlayer = new MediaPlayer();
+    	    AssetFileDescriptor afd = context.getAssets().openFd(file);
+    	    mMediaPlayer.setDataSource(
+    	            afd.getFileDescriptor(),
+    	            afd.getStartOffset(),
+    	            afd.getLength()
+    	        );
+    	    afd.close();
+    	    mMediaPlayer.prepare();
+    	    mMediaPlayer.start();
+    	} catch (IllegalArgumentException e) {
+    	    e.printStackTrace();
+    	} catch (IllegalStateException e) {
+    	    e.printStackTrace();
+    	} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+    }
 }

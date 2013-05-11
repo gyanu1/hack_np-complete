@@ -2,37 +2,35 @@ package com.lftechnology.childtutor;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.xmlpull.v1.XmlPullParserException;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 
 import com.lftechnology.childtutor.model.Lesson;
+import com.lftechnology.childtutor.model.Lesson.Page;
 import com.lftechnology.childtutor.model.LessonParser;
 
 public class LessonPlay extends Activity {
 
-    private Lesson lesson;
+	private Lesson lesson;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.lesson_play);
-        loadLesson();
-        Lesson.Page currentPage=lesson.getNextPage();        
-        Log.i(Home.TAG, "image :"+currentPage.image +"sound :"+currentPage.sound);
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.lesson_play);
 
-        // Create and set adapter
-        LessonPlayAdapter adapter = new LessonPlayAdapter(this,lesson);
-        ViewPager myPager = (ViewPager) findViewById(R.id.customviewpager);
-        myPager.setAdapter(adapter);
-        myPager.setCurrentItem(0);
-      
-
-    }
+		// Create and set adapter
+		LessonPlayAdapter adapter = new LessonPlayAdapter(this);
+		ViewPager myPager = (ViewPager) findViewById(R.id.customviewpager);
+		myPager.setAdapter(adapter);
+		myPager.setCurrentItem(0);
+		loadLesson();
+	}
 
 	private void loadLesson() {
 		try {
@@ -48,6 +46,25 @@ public class LessonPlay extends Activity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public List<Page> generatePage(){
+		List<Page> pages=new ArrayList<Page>();
+		Page page=new Page();
+		int i=0;
+		while(true){
+			page.sound=lesson.getNextPage().sound;
+			page.image=lesson.getNextPage().image;
+			if(page.sound!=null){
+				pages.set(i, page);
+				i++;
+			}
+			else{
+				break;
+			}
+		}
+		return pages;
+		
 	}
 
 }
