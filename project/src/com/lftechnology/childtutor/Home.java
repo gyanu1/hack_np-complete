@@ -31,6 +31,7 @@ private static final String TAG="Home";
 
     @Override
     public void onClick(View v) {
+    	SoundEffects.buttonClickSound(this);//To generate sound while clicking button
         switch (v.getId()) {
 
         case R.id.childTutorLogo:

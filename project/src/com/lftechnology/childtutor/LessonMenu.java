@@ -39,9 +39,14 @@ public class LessonMenu extends Activity implements OnClickListener{
 	}
 
 	public void onClick(View v) {
+   	SoundEffects.buttonClickSound(this);//To generate sound while clicking button
+
 		switch (v.getId()) {
 
-		case R.id.childTutorLogo:
+		case R.id.lesson1:
+			//call lessen1
+			break;
+		case R.id.lesson2:
 			//call lessen1
 			break;
 
