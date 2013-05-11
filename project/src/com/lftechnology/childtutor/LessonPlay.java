@@ -2,6 +2,8 @@ package com.lftechnology.childtutor;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -10,6 +12,7 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 
 import com.lftechnology.childtutor.model.Lesson;
+import com.lftechnology.childtutor.model.Lesson.Page;
 import com.lftechnology.childtutor.model.LessonParser;
 
 public class LessonPlay extends Activity {
@@ -26,9 +29,7 @@ public class LessonPlay extends Activity {
 		ViewPager myPager = (ViewPager) findViewById(R.id.customviewpager);
 		myPager.setAdapter(adapter);
 		myPager.setCurrentItem(0);
-
 		loadLesson();
-
 	}
 
 	private void loadLesson() {
@@ -45,6 +46,25 @@ public class LessonPlay extends Activity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public List<Page> generatePage(){
+		List<Page> pages=new ArrayList<Page>();
+		Page page=new Page();
+		int i=0;
+		while(true){
+			page.sound=lesson.getNextPage().sound;
+			page.image=lesson.getNextPage().image;
+			if(page.sound!=null){
+				pages.set(i, page);
+				i++;
+			}
+			else{
+				break;
+			}
+		}
+		return pages;
+		
 	}
 
 }
