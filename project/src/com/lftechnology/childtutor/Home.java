@@ -42,7 +42,7 @@ public class Home extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		AndroidUtility.play(this, R.raw.beep9);// To generate sound
+		AndroidUtility.play(this, R.raw.buttonclick);// To generate sound
 												// while clicking
 												// button
 

@@ -4,6 +4,8 @@
 package com.lftechnology.childtutor;
 
 
+import com.lftechnology.childtutor.utils.AndroidUtility;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -41,6 +43,7 @@ public class LessonMenu extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
+		AndroidUtility.play(this, R.raw.buttonclick);
 		Intent intent;
 		Bundle bundle;
 
