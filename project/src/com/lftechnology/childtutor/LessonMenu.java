@@ -43,24 +43,7 @@ public class LessonMenu extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		AndroidUtility.play(this, R.raw.buttonclick);
-		Intent intent;
-		Bundle bundle;
-
-		intent = new Intent().setClass(this, LessonPlay.class);
-		bundle = new Bundle();
-
-		switch (v.getId()) {
-
-		case R.id.abc:
-			bundle.putString("lesson", "kakhaga");
-			break;
-		case R.id.lesson2:
-			bundle.putString("lesson", "kakhaga");
-			break;
-
-		}
-		intent.putExtras(bundle);
-		startActivity(intent);
+		Intent j = new Intent(getApplicationContext(), Next1.class);
+		startActivity(j);
 	}
 }
