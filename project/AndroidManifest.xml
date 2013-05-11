@@ -21,8 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LessonMenu">        
-            
+        <activity android:name=".LessonMenu" >
+        </activity>
+        <activity android:name=".LessonPlay" >
         </activity>
     </application>
 
