@@ -10,8 +10,8 @@
 	     android:id="@+id/lesson2"
 	     android:layout_width="match_parent"
 	     android:layout_height="117dp"
-	     android:paddingBottom="50dp"
-	     android:background="@drawable/kakhaga" />
+	     android:background="@drawable/kakhaga"
+	     android:paddingBottom="50dp" />
 
 	 <ImageView
 	     android:id="@+id/imageView1"
