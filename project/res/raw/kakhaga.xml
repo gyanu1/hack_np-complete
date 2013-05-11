@@ -1,0 +1,53 @@
+<lesson><pages><page>
+            <sound path="ka.avi" />
+
+            <image path="ka.png" />
+        </page>
+        <page>
+            <sound path="kha.avi" />
+
+            <image path="kha.png" />
+        </page>
+        <page>
+            <sound path="ga.avi" />
+
+            <image path="ga.png" />
+        </page>
+        <page>
+            <sound path="gha.avi" />
+
+            <image path="gha.png" />
+        </page>
+        <page>
+            <sound path="nga.avi" />
+
+            <image path="nga.png" />
+        </page>
+        <page>
+            <sound path="cha.avi" />
+
+            <image path="cha.png" />
+        </page>
+        <page>
+            <sound path="chha.avi" />
+
+            <image path="chha.png" />
+        </page>
+        <page>
+            <sound path="ja.avi" />
+
+            <image path="ja.png" />
+        </page>
+        <page>
+            <sound path="jha.avi" />
+
+            <image path="jha.png" />
+        </page>
+        <page>
+            <sound path="ana.avi" />
+
+            <image path="ana.png" />
+        </page>
+    </pages>
+
+</lesson>
