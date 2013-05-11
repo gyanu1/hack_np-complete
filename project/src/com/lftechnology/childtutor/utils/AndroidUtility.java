@@ -15,8 +15,15 @@ import android.media.MediaPlayer;
  * 
  */
 public class AndroidUtility {
+	public static MediaPlayer  mMediaPlayer=null;
+	public AndroidUtility(){
+		if(mMediaPlayer == null){
+			mMediaPlayer=new MediaPlayer();	
+		}
+	}
     public static void play(Context context, int id) {
-        MediaPlayer mMediaPlayer = new MediaPlayer();
+    	new AndroidUtility();
+     //   MediaPlayer mMediaPlayer = new MediaPlayer();
         mMediaPlayer = MediaPlayer.create(context, id);
         mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
         mMediaPlayer.setLooping(false);
@@ -25,7 +32,7 @@ public class AndroidUtility {
     
     public static void playKaKhaGa(Context context, String file) {
     	try {    		
-    		MediaPlayer mMediaPlayer = new MediaPlayer();
+    	//	MediaPlayer mMediaPlayer = new MediaPlayer();
     	    AssetFileDescriptor afd = context.getAssets().openFd(file);
     	    mMediaPlayer.setDataSource(
     	            afd.getFileDescriptor(),

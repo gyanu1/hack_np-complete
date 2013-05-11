@@ -13,13 +13,15 @@ import android.view.View.OnClickListener;
 
 public class Next3 extends Activity implements OnClickListener {
 	private static final String TAG = "Home";
-
+	MediaPlayer mMediaPlayer = new MediaPlayer();
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		Log.d(TAG, "Loading Child Tutor..");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.gha);
-		  MediaPlayer mMediaPlayer = new MediaPlayer();
+//		AndroidUtility.play(this, R.raw.ka);
+	//	AndroidUtility.mMediaPlayer.stop();
+		//  MediaPlayer mMediaPlayer = new MediaPlayer();
 	        mMediaPlayer = MediaPlayer.create(this, R.raw.ga);
 	        mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 	        mMediaPlayer.setLooping(true);
@@ -39,8 +41,19 @@ public class Next3 extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
+		mMediaPlayer.setLooping(false);
+		mMediaPlayer.stop();
 		Intent j = new Intent(getApplicationContext(), Home.class);
 		startActivity(j);
 
+	}
+	
+	@Override
+	public void onBackPressed() {
+		mMediaPlayer.setLooping(false);
+		mMediaPlayer.stop();
+		Intent j = new Intent(getApplicationContext(), Next2.class);
+		startActivity(j);
+				
 	}
 }

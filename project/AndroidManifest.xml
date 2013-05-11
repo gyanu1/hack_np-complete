@@ -13,23 +13,37 @@
         android:icon="@drawable/logo"
         android:theme="@style/AppTheme" >
         <activity
-        android:name="com.lftechnology.childtutor.SplashActivity"
-        android:label="" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+            android:name="com.lftechnology.childtutor.SplashActivity"
+            android:label="" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.lftechnology.childtutor.Home"
             android:label="" >
         </activity>
-        <activity android:name=".LessonMenu"
+        <activity
+            android:name=".LessonMenu"
             android:label="" >
-            
         </activity>
-        <activity android:name=".LessonPlay" 
-            android:label="">
+        <activity
+            android:name=".LessonPlay"
+            android:label="" >
+        </activity>
+        <activity
+            android:name=".Next1"
+            android:label="" >
+        </activity>
+        <activity
+            android:name=".Next2"
+            android:label="" >
+        </activity>
+        <activity
+            android:name=".Next3"
+            android:label="" >
         </activity>
     </application>
 
